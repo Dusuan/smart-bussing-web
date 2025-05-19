@@ -19,12 +19,15 @@ body {
         -webkit-text-stroke: 1px white;
     }
     .text-outline-bold {
-        -webkit-text-stroke: 2px #3B7C5F;
+        -webkit-text-stroke: 3px #3B7C5F;
+    }
+    .text-outline-bold-sm {
+        -webkit-text-stroke: 1px #3B7C5F;
     }
     .text-outline-white-sm {
         -webkit-text-stroke: 1px white;
     }
     .text-outline-sm {
-        -webkit-text-stroke: 1px #202221;
+        -webkit-text-stroke: 1.5px #3B7C5F;
     }
 }

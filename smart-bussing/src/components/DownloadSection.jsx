@@ -9,7 +9,7 @@ const DownloadSection = () => {
           Más rutas, <br />
           menos dudas
         </div>
-        <div className="text-center lg:text-left py-4 text-2xl lg:text-2xl">
+        <div className="text-center text-outline-sm lg:text-left py-4 text-2xl lg:text-2xl">
           Encuentra el mejor camino en segundos <br />y viaja sin
           complicaciones.
         </div>
