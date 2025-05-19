@@ -13,7 +13,7 @@ const DownloadSection = () => {
           Encuentra el mejor camino en segundos <br />y viaja sin
           complicaciones.
         </div>
-        <div className="text-center lg:text-left text-outline-white text-2xl lg:text-5xl text-[#3B7C5F] py-4 ">
+        <div className="text-center lg:text-left text-outline-white-sm text-2xl lg:text-5xl text-[#3B7C5F] py-4 ">
           Descarga la App:
         </div>
         <div  className="">

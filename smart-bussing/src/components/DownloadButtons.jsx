@@ -24,7 +24,7 @@ function DownloadButtons() {
         <a
           href="#contacto"
         >
-          <button className="bg-[#3B7C5F] hover:bg-[#3b6652] border-[2px] border-white rounded-[20px] my-2 w-full h-[110px] lg:w-[350px] lg:h-[110px] flex items-center justify-center shadow-lg cursor-pointer transition-colors duration-300">
+          <button className="bg-[#3B7C5F] text-outline-sm  hover:bg-[#3b6652] border-[2px] border-white rounded-[20px] my-2 w-full h-[110px] lg:w-[350px] lg:h-[110px] flex items-center justify-center shadow-lg cursor-pointer transition-colors duration-300">
             Próximamente
           </button>
         </a>
