@@ -5,7 +5,7 @@ const DownloadSection = () => {
   return (
     <div className="font-bold text-outline text-3xl px-6 mt-40 lg:mx-40 lg:px-25 flex-col lg:flex lg:flex-row">
       <div className="">
-        <div className="text-center lg:text-left text-outline-bold text-5xl lg:text-7xl pb-4">
+        <div id="download" className="text-center lg:text-left text-outline-bold text-5xl lg:text-7xl pb-4">
           Más rutas, <br />
           menos dudas
         </div>

@@ -1,8 +1,8 @@
 import Logo from "../assets/smart-bussing-logo.svg";
 
 const NavItems = [
-    {label: "Descarga", href: "#"},
-    {label: "Contacto", href: "#contacto"},
+    {label: "Descarga", href: "#download"},
+    {label: "Contacto", href: "#register"},
 ];
 
 const Navbar = () => {

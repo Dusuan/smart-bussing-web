@@ -16,7 +16,7 @@ function App() {
         </div>
         <div className="bg-gradient-to-b from-[#9EBC8A] to-[#66745d] z-10">
           <div className="flex flex-col justify-center items-center mb-40 pt-10">
-            <div className="flex flex-col justify-center items-center text-center px-10 text-outline-sm mb-10 text-white text-2xl lg:text-5xl">
+            <div id="register" className="flex flex-col justify-center items-center text-center px-10 text-outline-sm mb-10 text-white text-2xl lg:text-5xl">
               <div> ¡Regístrate para ser de </div>
               <div>los primeros usuarios en probar la app!</div>
             </div>
