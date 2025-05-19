@@ -16,7 +16,7 @@ const DownloadSection = () => {
         <div className="text-center lg:text-left text-outline-white text-2xl lg:text-5xl text-[#3B7C5F] py-4 ">
           Descarga la App:
         </div>
-        <div className="">
+        <div  className="">
           {/*Cambiar tamaño para responsive*/}
           <DownloadButtons />
         </div>
