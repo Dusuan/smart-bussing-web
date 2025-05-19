@@ -2,7 +2,7 @@ import DownloadSection from "./components/DownloadSection";
 import Navbar from "./components/Navbar";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
-import ProximamenteForm from "./components/proximamenteForm";
+import ProximamenteForm from "./components/ProximamenteForm_";
 
 function App() {
   return (
