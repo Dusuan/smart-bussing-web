@@ -35,7 +35,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div style={{ backgroundColor: "#FFFFFF" }} className="rounded-lg m-2e">
+    <div style={{ backgroundColor: "#FFFFFF" }} className="rounded-lg m-2">
       <Box
         component="form"
         onSubmit={handleSubmit}

@@ -16,15 +16,15 @@ body {
         -webkit-text-stroke: 2px #3B7C5F;
     }
     .text-outline-white {
-        -webkit-text-stroke: 2px white;
+        -webkit-text-stroke: 1px white;
     }
     .text-outline-bold {
-        -webkit-text-stroke: 3px #3B7C5F;
+        -webkit-text-stroke: 2px #3B7C5F;
     }
     .text-outline-white-sm {
         -webkit-text-stroke: 1px white;
     }
     .text-outline-sm {
-        -webkit-text-stroke: 1px #3B7C5F;
+        -webkit-text-stroke: 1px #202221;
     }
 }
