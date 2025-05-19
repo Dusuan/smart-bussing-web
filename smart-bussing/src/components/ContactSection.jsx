@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 const ContactSection = () => {
   return (
     <div
-      id="contacto"
+      
       className="justify-center  items-center text-center mb-10 p-6"
     >
       <div className="flex flex-col">

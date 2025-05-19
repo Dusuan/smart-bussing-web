@@ -1,9 +1,16 @@
 import Logo from "../assets/smart-bussing-logo.svg";
 
-const NavItems = [
-    {label: "Descarga", href: "#download"},
-    {label: "Contacto", href: "#register"},
-];
+const isMobile = window.innerWidth <= 768;
+
+const NavItems = isMobile
+    ? [
+            { label: "Descarga", href: "#mobile-download" },
+            { label: "Contacto", href: "#mobile-register" },
+        ]
+    : [
+            { label: "Descarga", href: "#" },
+            { label: "Contacto", href: "#register" },
+        ];
 
 const Navbar = () => {
     return (
