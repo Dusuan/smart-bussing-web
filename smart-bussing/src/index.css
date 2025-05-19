@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Rowdies:wght@300;400;700&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    color: white;
+}
+
+@layer utilities {
+    .text-outline {
+        -webkit-text-stroke: 2px #3B7C5F;
+    }
+    .text-outline-white {
+        -webkit-text-stroke: 2px white;
+    }
+    .text-outline-bold {
+        -webkit-text-stroke: 3px #3B7C5F;
+    }
+    .text-outline-white-sm {
+        -webkit-text-stroke: 1px white;
+    }
+    .text-outline-sm {
+        -webkit-text-stroke: 1px #3B7C5F;
+    }
+}
