@@ -13,13 +13,22 @@ export default function ProximamenteForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await fetch("https://smart-bussing-back.onrender.com/api/v1/interesado", {
+    const response = await fetch("https://smart-bussing-back.onrender.com/api/v1/interesado", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
+
+    if(response.ok){
+      alert("EL registro se realizo exitosamente")
+    }
+
+    else{
+      alert("Hubo una falla en el sistema", response.status)
+    }
+
     console.log(JSON.stringify(formData));
     setFormData({
       email: "",

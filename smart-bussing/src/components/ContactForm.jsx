@@ -17,13 +17,23 @@ const ContactForm = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await fetch("https://smart-bussing-back.onrender.com/api/v1/registrarLugar", {  
+    const response = await fetch("https://smart-bussing-back.onrender.com/api/v1/registrarLugar", {  
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
+
+    if(response.ok){
+      alert("Se han registrado el ligar y la empresa con exito")
+    }
+
+    else{
+      alert("Hubo un error en el sistema", response.status)
+    }
+
+
     console.log(JSON.stringify(formData));
     setFormData({
       nombreEmpresa: "",
