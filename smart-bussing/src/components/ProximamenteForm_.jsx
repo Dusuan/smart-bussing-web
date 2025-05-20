@@ -3,7 +3,7 @@ import { useState } from "react";
 import BottonRobado from "./bottonRobado";
 export default function ProximamenteForm() {
   const [formData, setFormData] = useState({
-    Correo: "",
+    email: "",
   });
 
   const handleChange = (e) => {
