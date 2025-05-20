@@ -17,7 +17,7 @@ const ContactForm = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await fetch("/api/form", {  
+    await fetch("https://smart-bussing-back.onrender.com/api/v1/registrarLugar", {  
       method: "POST",
       headers: {
         "Content-Type": "application/json",

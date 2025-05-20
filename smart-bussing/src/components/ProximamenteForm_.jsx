@@ -13,7 +13,7 @@ export default function ProximamenteForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await fetch("/api/form", {
+    await fetch("https://smart-bussing-back.onrender.com/api/v1/interesado", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
