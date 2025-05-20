@@ -22,7 +22,7 @@ export default function ProximamenteForm() {
     });
     console.log(JSON.stringify(formData));
     setFormData({
-      Correo: "",
+      email: "",
     });
   }
 
@@ -38,7 +38,7 @@ export default function ProximamenteForm() {
             <div item xs={12} sm={6} md={6} className="pr-1">
               <TextField
                 label="Correo"
-                name="Correo"
+                name="email"
                 type="email"
                 fullWidth
                 required
