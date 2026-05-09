@@ -82,7 +82,7 @@ const ContactForm = () => {
       const finalData = { ...formData, urlFiles };
 
       const response = await fetch(
-        "https://smart-bussing-back.onrender.com/api/v1/registrarLugar",
+        "https://smart-bussing-back.onrender.com/api/v1/registrarLuga",
         {
           method: "POST",
           headers: {
