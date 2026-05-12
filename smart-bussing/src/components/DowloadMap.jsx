@@ -6,7 +6,7 @@ const DowloadMap = () => {
     const [loaded, setLoaded] = useState(false);
 
     return (
-        <div className="w-full flex justify-center" style={{ width: "484px", height: "507px" }}>
+        <div className="w-[260px] h-[272px] md:w-[380px] md:h-[398px] lg:w-[484px] lg:h-[507px] flex justify-center">
             {!loaded && (
                 <div className="flex items-center justify-center w-full h-full">
                     <CircularProgress sx={{ color: "white" }} />
@@ -15,8 +15,8 @@ const DowloadMap = () => {
             <img
                 src={HomeDecor}
                 alt="Home decoration"
-                style={{ width: "484px", height: "507px", display: loaded ? "block" : "none" }}
-                className="z-10"
+                className="w-full h-full object-contain z-10"
+                style={{ display: loaded ? "block" : "none" }}
                 onLoad={() => setLoaded(true)}
             />
         </div>
