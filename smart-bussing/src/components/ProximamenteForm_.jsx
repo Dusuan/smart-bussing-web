@@ -21,12 +21,14 @@ export default function ProximamenteForm() {
       body: JSON.stringify(formData),
     });
 
-    if(response.ok){
-      alert("EL registro se realizo exitosamente")
+    if (response.ok) {
+      alert("El registro se realizo exitosamente")
+      console.log("El registro se realizo exitosamente")
     }
 
-    else{
+    else {
       alert("Hubo una falla en el sistema", response.status)
+      console.log("Hubo una falla en el sistema", response.status)
     }
 
     console.log(JSON.stringify(formData));
@@ -53,14 +55,14 @@ export default function ProximamenteForm() {
                 required
                 variant="outlined"
                 size="small"
-                value={formData.Correo}
+                value={formData.email}
                 onChange={handleChange}
                 sx={{}}
               />
             </div>
 
-            <div onClick={handleSubmit} className="justify-center items-center "item xs={12}>
-             < BottonRobado />
+            <div className="justify-center items-center " item xs={12}>
+              < BottonRobado />
             </div>
           </div>
         </Stack>
