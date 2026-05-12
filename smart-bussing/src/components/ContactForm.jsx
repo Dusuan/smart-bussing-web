@@ -146,7 +146,7 @@ const ContactForm = () => {
               </Typography>
               <label
                 htmlFor="logo-upload"
-                className="flex items-center justify-center text-sm px-6 h-10 rounded-[13px] bg-[#5F93A2] hover:bg-[#4a7d8c] text-white transition-colors duration-200 cursor-pointer"
+                className="flex items-center justify-center text-base px-8 h-12 rounded-[13px] bg-[#5F93A2] hover:bg-[#4a7d8c] text-white transition-colors duration-200 cursor-pointer"
               >
                 Seleccionar Logo
               </label>
@@ -169,7 +169,7 @@ const ContactForm = () => {
               </Typography>
               <label
                 htmlFor="fotos-upload"
-                className="flex items-center justify-center text-sm px-6 h-10 rounded-[13px] bg-[#5F93A2] hover:bg-[#4a7d8c] text-white transition-colors duration-200 cursor-pointer"
+                className="flex items-center justify-center text-base px-8 h-12 rounded-[13px] bg-[#5F93A2] hover:bg-[#4a7d8c] text-white transition-colors duration-200 cursor-pointer"
               >
                 Elegir Fotos
               </label>
