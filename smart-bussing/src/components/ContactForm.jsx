@@ -189,7 +189,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div onClick={!isUploading ? handleSubmit : undefined} className="flex justify-center items-center mt-4 cursor-pointer">
+          <div onClick={!isUploading ? handleSubmit : undefined} className="flex justify-center items-center mt-4 mb-8 cursor-pointer">
             {isUploading ? (
               <Button disabled variant="contained" className="w-full h-[40px]">
                 <CircularProgress size={24} />
