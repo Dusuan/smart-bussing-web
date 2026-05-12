@@ -44,7 +44,7 @@ export default function ProximamenteForm() {
               onChange={handleChange}
               sx={{ "& .MuiOutlinedInput-root": { borderRadius: "13px" } }}
             />
-            <div onClick={handleSubmit} style={{ display: "flex", justifyContent: "center" }}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
               <BottonRobado />
             </div>
           </div>
