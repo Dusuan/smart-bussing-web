@@ -1,10 +1,9 @@
-import { Box, TextField, Button, Stack } from "@mui/material";
+import { Box, TextField, Stack } from "@mui/material";
 import { useState } from "react";
 import BottonRobado from "./bottonRobado";
+
 export default function ProximamenteForm() {
-  const [formData, setFormData] = useState({
-    email: "",
-  });
+  const [formData, setFormData] = useState({ email: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,54 +14,38 @@ export default function ProximamenteForm() {
     e.preventDefault();
     const response = await fetch("https://smart-bussing-back.onrender.com/api/v1/interesado", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
 
     if (response.ok) {
-      alert("El registro se realizo exitosamente")
-      console.log("El registro se realizo exitosamente")
+      alert("El registro se realizo exitosamente");
+    } else {
+      alert("Hubo una falla en el sistema", response.status);
     }
 
-    else {
-      alert("Hubo una falla en el sistema", response.status)
-      console.log("Hubo una falla en el sistema", response.status)
-    }
-
-    console.log(JSON.stringify(formData));
-    setFormData({
-      email: "",
-    });
+    setFormData({ email: "" });
   }
 
   return (
-    <div style={{ backgroundColor: "#FFFFFF" }} className="rounded-lg m-2">
-      <Box
-        component="form"
-        onSubmit={handleSubmit}
-        className="justify-center p-6"
-      >
+    <div style={{ backgroundColor: "#FFFFFF", border: "1px solid #C3C3C3" }} className="rounded-lg m-2">
+      <Box component="form" onSubmit={handleSubmit} className="justify-center p-6">
         <Stack spacing={2} className="pt-2">
-          <div className="flex items-center">
-            <div item xs={12} sm={6} md={6} className="pr-1">
-              <TextField
-                label="Correo"
-                name="email"
-                type="email"
-                fullWidth
-                required
-                variant="outlined"
-                size="small"
-                value={formData.email}
-                onChange={handleChange}
-                sx={{}}
-              />
-            </div>
-
-            <div className="justify-center items-center " item xs={12}>
-              < BottonRobado />
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+            <TextField
+              label="Correo"
+              name="email"
+              type="email"
+              fullWidth
+              required
+              variant="outlined"
+              size="small"
+              value={formData.email}
+              onChange={handleChange}
+              sx={{ "& .MuiOutlinedInput-root": { borderRadius: "13px" } }}
+            />
+            <div onClick={handleSubmit} style={{ display: "flex", justifyContent: "center" }}>
+              <BottonRobado />
             </div>
           </div>
         </Stack>

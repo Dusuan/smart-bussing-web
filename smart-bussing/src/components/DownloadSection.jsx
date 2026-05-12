@@ -3,27 +3,25 @@ import DownloadButtons from "./DownloadButtons";
 
 const DownloadSection = () => {
   return (
-    <div className="font-bold text-outline text-3xl px-6 mt-40 lg:mx-40 lg:px-25 flex-col lg:flex lg:flex-row">
-      <div id="download"  className="">
-        <div className="text-center lg:text-left text-outline-bold text-5xl lg:text-7xl pb-4">
-          Más rutas, <br />
-          menos dudas
+    <div className="font-bold text-[#5F93A2] text-3xl px-10 lg:mx-10 lg:px-10 flex-col lg:flex lg:flex-row lg:items-center">
+      <div id="download">
+        <div style={{ fontSize: "45px" }} className="pb-4">
+          ¡Más rutas, <br />
+          menos dudas!
         </div>
-        <div id="mobile-download" className="text-center text-outline-sm lg:text-left py-4 text-2xl lg:text-2xl">
-          Encuentra el mejor camino en segundos <br />y viaja sin
+        <div id="mobile-download" style={{ fontSize: "20px", color: "#4B4B4B" }} className="py-4 font-semibold pb-9">
+          Encuentra el mejor camino en segundos y <br /> viaja sin
           complicaciones.
         </div>
-        <div  className="text-center lg:text-left text-outline-white-sm text-2xl lg:text-5xl text-[#3B7C5F] py-4 ">
+        <div style={{ fontSize: "35px" }} className="py-4">
           Descarga la App:
         </div>
-        <div  className="">
-          {/*Cambiar tamaño para responsive*/}
+        <div>
           <DownloadButtons />
         </div>
       </div>
-      {/* Cambiar tamaño para repsponsive      */}
 
-      <div className="lg:mx-20 flex lg:block">
+      <div className="lg:ml-60 flex lg:block shrink-0">
         <DownloadMap />
       </div>
     </div>

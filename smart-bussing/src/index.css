@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Rowdies:wght@300;400;700&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
-    font-family: "Rowdies", sans-serif;
+    font-family: "Momo Trust Display", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 body {
     color: white;
+    font-family: "Momo Trust Display", sans-serif;
 }
 
 @layer utilities {

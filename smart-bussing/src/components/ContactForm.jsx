@@ -3,6 +3,12 @@ import { useState } from "react";
 import BottonRobado from "./bottonRobado";
 import { supabase } from "../supabaseClient";
 
+const fieldSx = {
+  "& .MuiOutlinedInput-root": {
+    borderRadius: "13px",
+  },
+};
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     nombreEmpresa: "",
@@ -85,9 +91,7 @@ const ContactForm = () => {
         "https://smart-bussing-back.onrender.com/api/v1/registrarLugar",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(finalData),
         }
       );
@@ -103,7 +107,6 @@ const ContactForm = () => {
         });
         setLogo(null);
         setFotos([]);
-        // Clear file inputs
         document.getElementById("logo-upload").value = "";
         document.getElementById("fotos-upload").value = "";
       } else {
@@ -118,95 +121,33 @@ const ContactForm = () => {
   }
 
   return (
-    <div style={{ backgroundColor: "#FFFFFF" }} className="rounded-lg m-2">
-      <Box
-        component="form"
-        onSubmit={handleSubmit}
-        className="justify-center p-6"
-      >
-        <Stack spacing={2} className="pt-2">
-          <div className="flex">
-            <div item xs={12} sm={6} md={6} className="pr-1 flex-1">
-              <TextField
-                label="Empresa"
-                name="nombreEmpresa"
-                fullWidth
-                required
-                variant="outlined"
-                size="small"
-                value={formData.nombreEmpresa}
-                onChange={handleChange}
-              />
-            </div>
-            <div item xs={12} sm={6} md={6} className="pl-1 flex-1">
-              <TextField
-                label="Nombre Lugar"
-                name="nombreLugar"
-                fullWidth
-                required
-                variant="outlined"
-                size="small"
-                value={formData.nombreLugar}
-                onChange={handleChange}
-              />
-            </div>
+    <div style={{ backgroundColor: "#FFFFFF", width: "795px", minHeight: "493px", border: "1px solid #C3C3C3" }} className="rounded-lg m-2">
+      <Box component="form" onSubmit={handleSubmit} className="justify-center px-10 pt-8 pb-2">
+        <Stack spacing={0} className="pt-2">
+          <div className="flex gap-[22px] w-full" style={{ marginBottom: "22px" }}>
+            <TextField label="Empresa" name="nombreEmpresa" fullWidth required variant="outlined" size="medium" value={formData.nombreEmpresa} onChange={handleChange} sx={fieldSx} />
+            <TextField label="Nombre Lugar" name="nombreLugar" fullWidth required variant="outlined" size="medium" value={formData.nombreLugar} onChange={handleChange} sx={fieldSx} />
           </div>
-
-          <div item xs={12} sm={6} md={6}>
-            <TextField
-              label="Email de la empresa"
-              name="correo_empresa"
-              type="email"
-              fullWidth
-              required
-              variant="outlined"
-              size="small"
-              value={formData.correo_empresa}
-              onChange={handleChange}
-              sx={{ backgroundColor: "#ffffff" }}
-            />
+          <div style={{ marginBottom: "22px" }}>
+            <TextField label="Email de la empresa" name="correo_empresa" type="email" fullWidth required variant="outlined" size="medium" value={formData.correo_empresa} onChange={handleChange} sx={fieldSx} />
           </div>
-          <div item xs={12} sm={6} md={6}>
-            <TextField
-              label="Número Telefónico"
-              name="telefono"
-              fullWidth
-              required
-              variant="outlined"
-              size="small"
-              value={formData.telefono}
-              onChange={handleChange}
-              sx={{ backgroundColor: "#ffffff" }}
-            />
+          <div style={{ marginBottom: "22px" }}>
+            <TextField label="Número Telefónico" name="telefono" fullWidth required variant="outlined" size="medium" value={formData.telefono} onChange={handleChange} sx={fieldSx} />
           </div>
-          <div item xs={12} sm={6} md={6}>
-            <TextField
-              label="Descripción del lugar"
-              name="descripcion"
-              multiline
-              rows={4}
-              fullWidth
-              required
-              variant="outlined"
-              size="small"
-              value={formData.descripcion}
-              onChange={handleChange}
-              sx={{ backgroundColor: "#ffffff" }}
-            />
+          <div style={{ marginBottom: "22px" }}>
+            <TextField label="Descripción del lugar" name="descripcion" multiline rows={4} fullWidth required variant="outlined" size="medium" value={formData.descripcion} onChange={handleChange} sx={fieldSx} />
           </div>
 
           {/* Subida de Imágenes */}
-          <div className="flex flex-col gap-4 mt-2 items-center">
+          <div className="flex flex-col gap-4 mt-2 items-center" style={{ marginBottom: "22px" }}>
             <div className="flex flex-col items-center">
               <Typography variant="body2" color="textSecondary" mb={1}>
                 Logo de la empresa (Obligatorio)
               </Typography>
               <label
                 htmlFor="logo-upload"
-                className="flex items-center justify-center text-sm px-6 h-10 rounded bg-[#3B7C5F] text-white relative overflow-hidden group z-10 hover:text-white duration-1000 cursor-pointer"
+                className="flex items-center justify-center text-sm px-6 h-10 rounded-[13px] bg-[#5F93A2] hover:bg-[#4a7d8c] text-white transition-colors duration-200 cursor-pointer"
               >
-                <span className="absolute bg-emerald-600 w-64 h-64 rounded-full -z-10 -left-10 -top-10 origin-center transform transition-all scale-0 group-hover:scale-100 duration-500"></span>
-                <span className="absolute bg-emerald-800 w-64 h-64 -left-10 -top-10 rounded-full -z-10 origin-center transform transition-all scale-0 group-hover:scale-100 duration-700"></span>
                 Seleccionar Logo
               </label>
               <input
@@ -218,9 +159,7 @@ const ContactForm = () => {
                 className="hidden"
               />
               {logo && (
-                <span className="text-xs text-gray-500 mt-1">
-                  {logo.name}
-                </span>
+                <span className="text-xs text-gray-500 mt-1">{logo.name}</span>
               )}
             </div>
 
@@ -230,10 +169,8 @@ const ContactForm = () => {
               </Typography>
               <label
                 htmlFor="fotos-upload"
-                className="flex items-center justify-center text-sm px-6 h-10 rounded bg-[#3B7C5F] text-white relative overflow-hidden group z-10 hover:text-white duration-1000 cursor-pointer"
+                className="flex items-center justify-center text-sm px-6 h-10 rounded-[13px] bg-[#5F93A2] hover:bg-[#4a7d8c] text-white transition-colors duration-200 cursor-pointer"
               >
-                <span className="absolute bg-emerald-600 w-64 h-64 rounded-full -z-10 -left-10 -top-10 origin-center transform transition-all scale-0 group-hover:scale-100 duration-500"></span>
-                <span className="absolute bg-emerald-800 w-64 h-64 -left-10 -top-10 rounded-full -z-10 origin-center transform transition-all scale-0 group-hover:scale-100 duration-700"></span>
                 Elegir Fotos
               </label>
               <input
@@ -252,7 +189,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div onClick={!isUploading ? handleSubmit : undefined} className="justify-center items-center mt-4 cursor-pointer flex" item xs={12}>
+          <div onClick={!isUploading ? handleSubmit : undefined} className="flex justify-center items-center mt-4 cursor-pointer">
             {isUploading ? (
               <Button disabled variant="contained" className="w-full h-[40px]">
                 <CircularProgress size={24} />
